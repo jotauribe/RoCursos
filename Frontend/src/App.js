@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import "./style.css";
-
+import Start from './stars'
 class App extends Component {
   constructor() {
     super();
@@ -35,7 +35,7 @@ class App extends Component {
               </div>
               <div className="footer">
                 <p className="price"> {"$" + curso.price} </p>
-                <p> {curso.rating} </p>
+                <p><Start stars={curso.rating} className="stars"></Start></p>
               </div>
             </div>
           </div>
