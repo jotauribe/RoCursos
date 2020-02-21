@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import axios from "axios";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./style.css";
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: []
+    };
+  }
+
+  async componentDidMount() {
+    const respuesta = await axios.get("http://localhost:8282/");
+    this.setState({ data: respuesta.data });
+  }
+
+  render() {
+    return this.state.data.map((curso, i) => {
+      return (
+        <div key={i} className="container">
+          <div>
+            <div className="container-data">
+              <div className="header">
+                <img
+                  src={"https://www.mytablemesa.com" + curso.imageUrl}
+                  className="img"
+                />
+                <p> {curso.maximumCredits + " CREDITS"} </p>
+              </div>
+              <div className="body">
+                <p className="title"> {curso.name} </p>
+                <p className="description"> {curso.imageText} </p>
+              </div>
+              <div className="footer">
+                <p className="price"> {"$" + curso.price} </p>
+                <p> {curso.rating} </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    });
+  }
 }
 
 export default App;
