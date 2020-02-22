@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import "./style.css";
-import Start from './stars'
+import Header from "./Component/HeaderCursos";
+import Body from "./Component/BodyCursos";
+import Footer from "./Component/FooterCursos";
+
 class App extends Component {
   constructor() {
     super();
@@ -20,24 +23,10 @@ class App extends Component {
     return this.state.data.map((curso, i) => {
       return (
         <div key={i} className="container">
-          <div>
-            <div className="container-data">
-              <div className="header">
-                <img
-                  src={"https://www.mytablemesa.com" + curso.imageUrl}
-                  className="img"
-                />
-                <p> {curso.maximumCredits + " CREDITS"} </p>
-              </div>
-              <div className="body">
-                <p className="title"> {curso.name} </p>
-                <p className="description"> {curso.imageText} </p>
-              </div>
-              <div className="footer">
-                <p className="price"> {"$" + curso.price} </p>
-                <p><Start stars={curso.rating} className="stars"></Start></p>
-              </div>
-            </div>
+          <div className="container-data">
+            <Header img={curso.imageUrl} credits={curso.maximumCredits} />
+            <Body name={curso.name} imgText={curso.imageText} />
+            <Footer price={curso.price} rating={curso.rating} />
           </div>
         </div>
       );
