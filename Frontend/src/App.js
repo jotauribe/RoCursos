@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-import "./style.css";
-import Header from "./Component/HeaderCursos";
-import Body from "./Component/BodyCursos";
-import Footer from "./Component/FooterCursos";
-
+import Curso from "./components/Curso";
 class App extends Component {
   constructor() {
     super();
@@ -20,17 +16,7 @@ class App extends Component {
   }
 
   render() {
-    return this.state.data.map((curso, i) => {
-      return (
-        <div key={i} className="container">
-          <div className="container-data">
-            <Header img={curso.imageUrl} credits={curso.maximumCredits} />
-            <Body name={curso.name} imgText={curso.imageText} />
-            <Footer price={curso.price} rating={curso.rating} />
-          </div>
-        </div>
-      );
-    });
+    return this.state.data.map((curso, i) => <Curso curso={curso} key={i}></Curso>);
   }
 }
 

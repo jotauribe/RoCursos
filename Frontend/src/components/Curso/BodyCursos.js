@@ -4,7 +4,7 @@ class Body extends Component {
   render() {
     const { name, imgText } = this.props;
     return (
-        <div className="body">
+      <div className="body">
         <p className="title"> {name} </p>
         <p className="description"> {imgText} </p>
       </div>
