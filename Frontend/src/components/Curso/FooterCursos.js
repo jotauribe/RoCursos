@@ -6,7 +6,7 @@ class Footer extends Component {
     let estrellas = "";
 
     for (var i = 0; i < Math.round(rating); i++) {
-      estrellas = estrellas + "★";
+      estrellas += "★";
     }
 
     return (

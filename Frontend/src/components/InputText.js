@@ -10,11 +10,13 @@ class Texto extends React.Component {
     return (
       <form>
         <input
-          type="text"
+          className="texto"
+          type="search"
           ref="texto"
-          placeholder="Escribe aqui..."
+          placeholder="Search all courses"
           onChange={this.getText.bind(this)}
-        />
+        >
+        </input>
       </form>
     );
   }

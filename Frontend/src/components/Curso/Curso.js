@@ -10,12 +10,10 @@ class Curso extends Component {
     const { curso } = this.props;
 
     return (
-      <div className="container">
-        <div className="container-data">
-          <Header img={curso.imageUrl} credits={curso.maximumCredits} />
-          <Body name={curso.name} imgText={curso.imageText} />
-          <Footer price={curso.price} rating={curso.rating} />
-        </div>
+      <div className="container-data">
+        <Header img={curso.imageUrl} credits={curso.maximumCredits} />
+        <Body name={curso.name} imgText={curso.imageText} />
+        <Footer price={curso.price} rating={curso.rating} />
       </div>
     );
   }
