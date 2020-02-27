@@ -1,38 +1,34 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, Component } from "react";
 import axios from "axios";
 
 import Curso from "./components/Curso";
 import Texto from "./components/InputText";
-import './components/Curso/style.css'
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: []
-    };
-  }
+import "./components/Curso/style.css";
 
-  async componentDidMount() {
-    const respuesta = await axios.get("http://localhost:8282/");
-    this.setState({ data: respuesta.data });
-  }
+function App() {
+  const [data, setData] = useState([]);
 
-  render() {
-    return (
-      <div className="contenedorTextClase">
-        <div>
-          <Texto></Texto>
-        </div>
+  useEffect(() => {
+    const getData = async  () => {
+      const { data: respuesta } = await axios.get("http://localhost:8282/");
+      setData(respuesta);
+    }
+    getData();
+  });
 
-        <div className="divClase">
-          {this.state.data.map((curso, i) => (
-            <Curso curso={curso} key={i}></Curso>
-          ))}
-        </div>
+  return (
+    <div className="contenedorTextClase">
+      <div>
+        <Texto></Texto>
       </div>
-    );
-  }
+
+      <div className="divClase">
+        {data.map((curso, i) => (
+          <Curso curso={curso} key={i}></Curso>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default App;
-
