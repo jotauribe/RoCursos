@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  background-color: #f7fbfc;
+  max-height: 60px;
+  border-bottom: solid 1px #dcdddd;
+}
+
+.header__image {
+  width: 82px;
+  height: 82px;
+  border-radius: 5px;
+}
+
+.header__credits {
+  padding: 4px 18px;
+  margin: 0;
+  max-height: 19px;
+  background-color: #ffffff;
+  border: 1px solid #d0d8dc;
+  border-radius: 15px;
+  color: #82888a;
+  font-size: 12px;
+  letter-spacing: .7px;
+  text-align: center;
+}

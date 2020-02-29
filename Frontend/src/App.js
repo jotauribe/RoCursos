@@ -3,7 +3,7 @@ import axios from "axios";
 
 import Curso from "./components/Curso";
 import TextInput from "./components/TextInput";
-import "./components/Curso/style.css";
+import "./App.css";
 
 function App() {
   const [data, setData] = useState([]);

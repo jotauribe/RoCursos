@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Header from "./HeaderCurso";
 import Body from "./BodyCurso";
@@ -10,7 +10,7 @@ function Curso({ curso }) {
     <div className="container-data">
       <Header img={curso.imageUrl} credits={curso.maximumCredits} />
       <Body name={curso.name} imgText={curso.imageText} />
-      <Footer price={curso.price} rating={curso.rating} />
+      <Footer className='curso__footer' price={curso.price} rating={curso.rating} />
     </div>
   );
 }
