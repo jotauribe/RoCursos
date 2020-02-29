@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import Header from "./HeaderCursos";
-import Body from "./BodyCursos";
-import Footer from "./FooterCursos";
+import Header from "./HeaderCurso";
+import Body from "./BodyCurso";
+import Footer from "./FooterCurso";
 import "./style.css";
 
 function Curso({ curso }) {

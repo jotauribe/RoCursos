@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 
-class Texto extends React.Component {
-  getText() {
+class TextInput extends React.Component {
+  
+
+   getText() {
     const texto = this.refs.texto.value;
     console.log(texto);
   }
 
   render() {
+    const {data} = this.props
+    console.log("esto es data", data)
     return (
-      <form>
+      
         <input
           className="texto"
           type="search"
@@ -17,9 +21,9 @@ class Texto extends React.Component {
           onChange={this.getText.bind(this)}
         >
         </input>
-      </form>
+
     );
   }
 }
 
-export default Texto;
+export default TextInput;

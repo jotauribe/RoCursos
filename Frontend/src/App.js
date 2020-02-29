@@ -1,8 +1,8 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import Curso from "./components/Curso";
-import Texto from "./components/InputText";
+import TextInput from "./components/TextInput";
 import "./components/Curso/style.css";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="contenedorTextClase">
       <div>
-        <Texto></Texto>
+        <TextInput></TextInput>
       </div>
 
       <div className="divClase">
