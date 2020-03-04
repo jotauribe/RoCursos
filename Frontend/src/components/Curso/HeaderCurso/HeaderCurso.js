@@ -8,6 +8,7 @@ function Header({ img, credits }) {
       <img
         className="header__image"
         src={"https://www.mytablemesa.com" + img}
+        alt=""
       />
       <p className="header__credits"> {credits + " CREDITS"} </p>
     </div>
