@@ -9,10 +9,10 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const getData = async  () => {
+    const getData = async () => {
       const { data: respuesta } = await axios.get("http://localhost:8282/");
       setData(respuesta);
-    }
+    };
     getData();
   });
 

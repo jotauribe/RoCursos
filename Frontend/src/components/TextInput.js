@@ -1,27 +1,20 @@
 import React, { Component } from "react";
 
 class TextInput extends React.Component {
-  
-
-   getText() {
+  getText() {
     const texto = this.refs.texto.value;
-    console.log(texto);
   }
 
   render() {
-    const {data} = this.props
-    console.log("esto es data", data)
+    const { data } = this.props;
     return (
-      
-        <input
-          className="texto"
-          type="search"
-          ref="texto"
-          placeholder="Search all courses"
-          onChange={this.getText.bind(this)}
-        >
-        </input>
-
+      <input
+        className="texto"
+        type="search"
+        ref="texto"
+        placeholder="Search all courses"
+        onChange={this.getText.bind(this)}
+      ></input>
     );
   }
 }

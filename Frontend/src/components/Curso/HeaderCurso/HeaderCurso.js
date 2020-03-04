@@ -1,14 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import './style.css'
+import "./style.css";
 
-const Header = ({ img, credits }) => {
+function Header({ img, credits }) {
   return (
     <div className="header">
-      <img className="header__image" src={'https://www.mytablemesa.com' + img}  />
-      <p className="header__credits">  {credits + ' CREDITS'} </p>
+      <img
+        className="header__image"
+        src={"https://www.mytablemesa.com" + img}
+      />
+      <p className="header__credits"> {credits + " CREDITS"} </p>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
