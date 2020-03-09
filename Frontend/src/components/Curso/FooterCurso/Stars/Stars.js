@@ -2,7 +2,7 @@ import React from "react";
 
 import "./style.css";
 
-function Estrellas({ rating }) {
+function Stars({ rating }) {
   let estrellas = "";
 
   for (var i = 0; i < Math.round(rating); i++) {
@@ -12,4 +12,4 @@ function Estrellas({ rating }) {
   return <span className="stars">{estrellas}</span>;
 }
 
-export default Estrellas;
+export default Stars;
