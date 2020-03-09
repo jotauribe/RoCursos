@@ -1,0 +1,16 @@
+.body {
+  flex-grow: 1;
+  padding: 5px 25px;
+  background-color: #ffffff;
+}
+
+.body__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.body__description {
+  font-size: 14px;
+  color: #82888a;
+}
