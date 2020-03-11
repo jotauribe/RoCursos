@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-class TextInput extends React.Component {
+class TextInput extends Component {
   getText() {
     const texto = this.refs.texto.value;
+    console.log(texto)
   }
 
   render() {
-    const { data } = this.props;
     return (
       <input
         className="texto"
