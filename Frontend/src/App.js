@@ -14,7 +14,7 @@ function App() {
       setData(respuesta);
     };
     getData();
-  });
+  },[]);
 
   return (
     <div className="contenedorTextClase">
