@@ -1,0 +1,14 @@
+.Loading{
+    border: 15px solid #f3f3f3;
+    width: 150px;
+    height: 150px;
+    border-top: 15px solid #00A2FF;
+    border-radius: 50%;
+    animation: Rotar 1.5s linear infinite;
+    margin: 15% 45%;
+}
+
+@keyframes Rotar{
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
