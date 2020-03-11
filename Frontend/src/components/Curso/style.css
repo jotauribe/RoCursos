@@ -1,4 +1,4 @@
-.container-data {
+.curso {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -14,26 +14,7 @@
   transition: transform 0.25s;
 }
 
-.divClase {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.texto {
-  border: 0;
-  margin: 3% 0 3% 7%;
-  font-size: 20px;
-  color: rgb(216, 214, 214);
-  border-bottom: 1px solid #e8e8e8;
-  width: 40%;
-}
-.contenedorTextClase {
-  max-width: 1280px;
-  margin: auto;
-}
-
-.container-data:hover {
+.curso:hover {
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -42,3 +23,4 @@
 .curso__footer {
   width: 100%;
 }
+

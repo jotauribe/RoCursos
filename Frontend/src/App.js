@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import Curso from "./components/Curso";
-import TextInput from "./components/TextInput";
+import TextInput from "./components/TextInput/TextInput";
 import Load from "./components/Load/Load";
 import "./App.css";
 
@@ -23,12 +23,12 @@ function App() {
     return <Load></Load>;
   } else {
     return (
-      <div className="contenedorTextClase">
+      <div className="contenedorCursos">
         <div>
           <TextInput></TextInput>
         </div>
 
-        <div className="divClase">
+        <div className="contenedorCursos__Listado">
           {data.map((curso, i) => (
             <Curso curso={curso} key={i}></Curso>
           ))}

@@ -1,0 +1,8 @@
+.TextInput {
+  border: 0;
+  margin: 3% 0 3% 7%;
+  font-size: 20px;
+  color: rgb(216, 214, 214);
+  border-bottom: 1px solid #e8e8e8;
+  width: 40%;
+}

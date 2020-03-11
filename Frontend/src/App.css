@@ -1,3 +1,14 @@
 body {
   font-family: 'Open Sans';
 }
+.contenedorCursos {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.contenedorCursos__Listado {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
