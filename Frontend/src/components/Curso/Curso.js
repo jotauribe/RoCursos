@@ -7,10 +7,14 @@ import "./style.css";
 
 function Curso({ curso }) {
   return (
-    <div className="container-data">
+    <div className="curso">
       <Header img={curso.imageUrl} credits={curso.maximumCredits} />
       <Body name={curso.name} imgText={curso.imageText} />
-      <Footer className='curso__footer' price={curso.price} rating={curso.rating} />
+      <Footer
+        className="curso__footer"
+        price={curso.price}
+        rating={curso.rating}
+      />
     </div>
   );
 }

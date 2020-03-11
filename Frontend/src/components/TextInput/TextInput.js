@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 
-class TextInput extends React.Component {
+import "./style.css";
+
+class TextInput extends Component {
   getText() {
     const texto = this.refs.texto.value;
+    console.log(texto);
   }
 
   render() {
-    const { data } = this.props;
     return (
       <input
-        className="texto"
+        className="TextInput"
         type="search"
         ref="texto"
         placeholder="Search all courses"
